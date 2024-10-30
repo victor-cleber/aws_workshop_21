@@ -46,4 +46,12 @@ variable "course" {
   default     = "Cloud Training - AWS bootcamp"
 }
 
+variable "username" {
+  type    = string
+  default = "admin4wiki"
+}
 
+variable "password" {
+  type    = string
+  default = "strong#password"
+}

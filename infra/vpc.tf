@@ -19,7 +19,7 @@ resource "aws_subnet" "alb_subnet_a" {
   map_public_ip_on_launch = "true"
 
   tags = {
-    Name = "${var.vpc_name}-alb-subnet-a"
+    Name = "${var.vpc_name}_alb_subnet_a"
   }
 }
 
@@ -29,7 +29,7 @@ resource "aws_subnet" "app_subnet_a" {
   availability_zone = data.aws_availability_zones.availability_zones.names[0]
 
   tags = {
-    Name = "${var.vpc_name}-app-subnet-a"
+    Name = "${var.vpc_name}_app_subnet_a"
   }
 }
 
@@ -39,7 +39,7 @@ resource "aws_subnet" "db_subnet_a" {
   availability_zone = data.aws_availability_zones.availability_zones.names[0]
 
   tags = {
-    Name = "${var.vpc_name}-db-subnet-b"
+    Name = "${var.vpc_name}_db_subnet_b"
   }
 }
 
@@ -50,7 +50,7 @@ resource "aws_subnet" "alb_subnet_b" {
   map_public_ip_on_launch = "true"
 
   tags = {
-    Name = "${var.vpc_name}-alb-subnet-b"
+    Name = "${var.vpc_name}_alb_subnet_b"
   }
 }
 
@@ -60,7 +60,7 @@ resource "aws_subnet" "app_subnet_b" {
   availability_zone = data.aws_availability_zones.availability_zones.names[1]
 
   tags = {
-    Name = "${var.vpc_name}-app-subnet-b"
+    Name = "${var.vpc_name}_app_subnet_b"
   }
 }
 
@@ -71,7 +71,7 @@ resource "aws_subnet" "db_subnet_b" {
   availability_zone = data.aws_availability_zones.availability_zones.names[1]
 
   tags = {
-    Name = "${var.vpc_name}-db-subnet-a"
+    Name = "${var.vpc_name}_db_subnet_a"
   }
 }
 
@@ -79,7 +79,7 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = "${var.vpc_name}-igw"
+    Name = "${var.vpc_name}_igw"
   }
 }
 
@@ -93,7 +93,7 @@ resource "aws_route_table" "alb_rt" {
   }
 
   tags = {
-    Name = "${var.vpc_name}-alb-RouteTable"
+    Name = "${var.vpc_name}_alb_RouteTable"
   }
 }
 
@@ -101,7 +101,7 @@ resource "aws_route_table" "app_rt" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = "${var.vpc_name}-app-RouteTable"
+    Name = "${var.vpc_name}_app_RouteTable"
   }
 }
 
@@ -109,7 +109,7 @@ resource "aws_route_table" "db_rt" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = "${var.vpc_name}-db-RouteTable"
+    Name = "${var.vpc_name}_db_RouteTable"
   }
 }
 

@@ -1,11 +1,10 @@
 #--------------------------
 # EC2 IAM INSTANCE PROFILE
 #--------------------------
-  #------------------------
-  # MariaDB Wiki DB
-  #------------------------
+#------------------------
+# MariaDB Wiki DB
+#------------------------
 # # create the rds instance
-
 
 resource "aws_iam_role" "ec2_iam_role" {
   name        = "ec2-role"
@@ -25,37 +24,17 @@ resource "aws_iam_role" "ec2_iam_role" {
   })
 }
 
-#Attach the user-managed-policy to the Role
+# Attach the user-managed-policy to the Role
 resource "aws_iam_role_policy_attachment" "iam_attach_ssm" {
   role       = aws_iam_role.ec2_iam_role.name
   policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
 }
 
-# Creates a instance profil to attach the role
+# Creates a instance profile to attach the role
 resource "aws_iam_instance_profile" "ec2_profile" {
   name = "ec2-profile"
   role = aws_iam_role.ec2_iam_role.name
 }
-
-
-
-# resource "aws_iam_role" "s3_iam_role" {
-#   name        = "s3_iam_role"
-#   description = "s3_iam_role_4_ec2"
-#   assume_role_policy = jsonencode({
-#     Version = "2012-10-17"
-#     Statement = [
-#       {
-#         Action = "sts:AssumeRole"
-#         Effect = "Allow"
-#         Sid    = ""
-#         Principal = {
-#           Service = "ec2.amazonaws.com"
-#         }
-#       },
-#     ]
-#   })
-# }
 
 resource "aws_iam_role_policy_attachment" "iam_attach_s3" {
   role       = aws_iam_role.ec2_iam_role.name
@@ -72,8 +51,8 @@ resource "aws_iam_policy" "ec2_policy_to_s3" {
     "Version" : "2012-10-17",
     "Statement" : [
       {
-        "Sid": "AllowsEc2ToSeeS3",
-			  "Effect": "Allow",
+        "Sid" : "AllowsEc2ToSeeS3",
+        "Effect" : "Allow",
         "Action" : [
           "s3:*"
         ],
@@ -100,18 +79,18 @@ resource "aws_iam_policy" "ec2_policy_to_secrets_manager" {
     "Version" : "2012-10-17",
     "Statement" : [
       {
-        "Sid": "AllowEC2ToSeeSecretsPolicy",			
-        "Effect": "Allow",
+        "Sid" : "AllowEC2ToSeeSecretsPolicy",
+        "Effect" : "Allow",
         "Action" : [
-                "secretsmanager:GetResourcePolicy",
-                "secretsmanager:GetSecretValue",
-                "secretsmanager:DescribeSecret",
-                "secretsmanager:ListSecretVersionIds",
-                "secretsmanager:ListSecrets"
+          "secretsmanager:GetResourcePolicy",
+          "secretsmanager:GetSecretValue",
+          "secretsmanager:DescribeSecret",
+          "secretsmanager:ListSecretVersionIds",
+          "secretsmanager:ListSecrets"
         ],
         "Resource" : [
-               "*"
-         ]
+          "*"
+        ]
       }
     ]
   })
