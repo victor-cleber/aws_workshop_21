@@ -64,7 +64,7 @@ The project was divided into activities and managed using Kanban and Discord for
   <tr>
     <td align="center"><a href="https://www.linkedin.com/in/victor-cleber/?locale=en_US"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/13708226?v=4" width="100px;" alt=""/><br /><sub><b>Victor Cleber</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/Henrique-1969"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/186761926?v=4" width="100px;" alt=""/><br /><sub><b>Henrique Barros</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/Henrique-1969"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/186761926?v=4" width="100px;" alt=""/><br /><sub><b>Augusto Colombo </b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/Henrique-1969"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/186761926?v=4" width="100px;" alt=""/><br /><sub><b>Sergio Fuzimoto</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/Gutocol"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/186768118?v=4" width="100px;" alt=""/><br /><sub><b>Augusto Colombo </b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/sergiofuzimoto"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/113111759?v=4" width="100px;" alt=""/><br /><sub><b>Sergio Fuzimoto</b></sub></a><br /></td>
   </tr>  
 </table>
