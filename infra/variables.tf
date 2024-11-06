@@ -2,7 +2,7 @@ variable "region" {
   type        = string
   description = "AWS region where the infrastructure will be created"
   #default     = "us-east-1"
-  default = "ap-southeast-2"
+  #default = "ap-southeast-2"
 }
 
 variable "vpc_name" {
@@ -47,11 +47,6 @@ variable "course" {
 }
 
 variable "username" {
-  type    = string
-  default = "admin4wiki"
-}
-
-variable "password" {
-  type    = string
-  default = "strong#password"
+  type = string
+  #default = "admin4wiki"  
 }
