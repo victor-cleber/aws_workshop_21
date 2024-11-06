@@ -13,5 +13,10 @@ output "rds_password" {
 
 output "mediawiki_alb" {
   value = aws_lb.mediawiki_alb.dns_name
-
 }
+
+output "mediawiki_s3" {
+  value = aws_s3_bucket.s3-media-wiki.bucket
+}
+
+
