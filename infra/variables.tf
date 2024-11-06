@@ -47,6 +47,6 @@ variable "course" {
 }
 
 variable "username" {
-  type    = string
+  type = string
   #default = "admin4wiki"  
 }
