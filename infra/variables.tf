@@ -50,3 +50,8 @@ variable "username" {
   type = string
   #default = "admin4wiki"  
 }
+
+variable "vpc_endpoint_4_s3" {
+  type    = string
+  default = "com.amazonaws.us-east-1.s3"
+}
